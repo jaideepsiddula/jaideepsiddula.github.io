@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  
+  <link rel="stylesheet" type="text/css" href="jaideepwebsite.css">
+  <link rel="stylesheet" type="text/css" href="ionicons.css">
+
+</head>
+
+<body>
+    <div class="post-header position">
+  <div class="container rrr">
+    <div class="row">
+      <div class="six columns">
+        <h4><a >JAIDEEP SIDDULA</a></h4>
+      </div>
+      <div class="six columns">
+        <nav>
+          <ul class="nav-list">
+            
+            <li><a href="jaideepwebsite.html" title="Linkedin"><i class="ion-ios-home"></i></a></li>
+            <li><a href="https://in.linkedin.com/in/jaideep-siddula-b6a710b5" title="Linkedin"><i class="ion-social-linkedin"></i></a></li>
+            <li><a href="https://github.com/jaideepsiddula"  title="Github"><i class="ion-social-github"></i></a></li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+    <div class="row">
+      <div class="intro " style="margin-top:45px;">
+        <div class="twelve columns recent">
+              <div style="display:inline-flex;" >
+            <div >
+              <a href="1stproject.html">
+              <img  src="python-data-science.png" style="height:150px;width:150px;"></img></a>
+            </div>
+             <div style="padding-left:20px;margin-top:20px"><a href="1stproject.html" class="link">Scraping HTML pages using PYTHON language  </a>
+            <span style="font-size:12px;">Feb. 8, 2017</span></div>
+          </div>
+           
+        <p class=" text" style="margin-top:20px;">
+          
+              This is a code to scrape HTML pages.For this we use google finance website as an example.
+              In this program we will   get the last traded price 
+              and the last traded volume by scraping HTML pages of google finance.In python there are many 
+              python modules the reads HTML pages.One of the popular modules is beautifulsoup module.
+              .We can simply use google finance package for python
+              and fetch the data.The google finance gadget API has been officially deprecated 
+              since October 2012, but as of April 2014, it's still active.The code for getting the 
+              last traded price and last traded volume is ..
+        </p> 
+          <pre >
+            <code style="background-color:#F0F8FF;font-style:bold"><b>
+    from googlefinance import getQuotes
+    import json
+    from urllib import request 
+    import re       #libraries
+
+
+    def get_price(security):
+      while True:
+        try:
+          price=json.dumps(getQuotes(security),indent=2)
+          data=json.loads(price)
+          price=data[0]['LastTradePrice']
+          return float(price)
+        except:
+          continue
+          </b>
+          </code>
+          </pre>
+          
+        <p class=" text">
+                        To get the prices using google finance package,we need one more package to import
+              called json.Now what json.dumps() does is it returns a json object.
+              the nect line json.loads() converts the json object into python dictionary
+              .Now we can access all the elements in the dictionary using their key values.If we print the price variable we get the output as json object.The output looks like ...</p>
+              <pre >
+            <code style="background-color:#fffff;font-style:bold"><b>
+[
+  {
+    "ID": "22144",
+    "StockSymbol": "AAPL",
+    "Index": "NASDAQ",
+    "LastTradePrice": "139.78",
+    "LastTradeWithCurrency": "139.78",
+    "LastTradeTime": "4:00PM EST",
+    "LastTradeDateTime": "2017-03-03T16:00:02Z",
+    "LastTradeDateTimeLong": "Mar 3, 4:00PM EST"
+  }
+]
+  
+</code>
+</pre>
+<p class="text">
+
+              We can easily know what's happening if we  print the price variable after each step.
+              In this code we only want the last traded price so we pass the key 'LastTradePrice'.
+              We put this code inside a function called get_price and we pass the security to get the last traded price 
+              of that security.
+</p>
+<p class=" text">Here's the fun part !Scraping the html page
+The code for scraping google finance HTML is.....</p>
+        <pre >
+            <code style="background-color:#F0F8FF;font-style:bold"><b>
+
+    def get_volume(security):
+      r=request.urlopen("https://www.google.com/finance?q="+security)
+      bytecode=r.read()
+      htmlstring=bytecode.decode()
+      string=""
+      safestring=str(bytecode,encoding='utf-8',errors='ignore')
+      for i in range(len(safestring)):
+        if safestring[i]=="," and safestring[i+1]=="_" and safestring[i+2]=="5":
+          for j in range(10):
+            string=string+safestring[i-10+j]
+          break
+      volume = float(re.sub(',', '', re.findall("\,\d+",string)[0]))
+      return volume
+
+    print(get_price("NASDAQ:AAPL")  
+    print(get_volume("NASDAQ:AAPL"))
+          </b>
+          </code>
+          </pre>
+                      <p class=" text">Scraping the webpages require two modules called urllib and re.
+            The module re is a string finding library which helps us  finding substrings with in a string
+            or patterns in a string.The code opens the page,reads it  and takes the html and decodes it into a 
+            readable file.We can print the htmlstring and safestring to know how different they look.To get the the volume,search for the pattern ",_5" in the html page because the number before it is the last traded price
+            .Last traded price can also be found in the html pages... ,it's  the number before last traded volume in the html page.
+            Now we put all our code inside the function called get_volume.Lastly,we print the last traded price and last traded volume calling our get_data() and get_colume() functions.The security we are passing is APPLE which is listed on American Stock Exchange,NASDAQ.
+          
+            This is how we get the price and volume by scraping the html pages of google finance.</p>
+        </div>
+        </div>
+      </div>
+        </div>
+        <div class="footer">
+          <hr class="thin" />
+
+          </div>
+</body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-  
+  <title>Algorithmic Trading</title>
   <link rel="stylesheet" type="text/css" href="jaideepwebsite.css">
   <link rel="stylesheet" type="text/css" href="ionicons.css">
 
@@ -18,7 +18,7 @@
         <nav>
           <ul class="nav-list">
             
-            <li><a href="jaideepwebsite.html" title="Linkedin"><i class="ion-ios-home"></i></a></li>
+            <li><a href="index.html" title="Linkedin"><i class="ion-ios-home"></i></a></li>
             <li><a href="https://in.linkedin.com/in/jaideep-siddula-b6a710b5" title="Linkedin"><i class="ion-social-linkedin"></i></a></li>
             <li><a href="https://github.com/jaideepsiddula"  title="Github"><i class="ion-social-github"></i></a></li>
             
@@ -37,18 +37,18 @@
               <a href="1stproject.html">
               <img  src="Programmatic4.jpg" style="height:150px;width:150px;border-radius:50%;"></img></a>
             </div>
-             <div style="padding-left:20px;margin-top:20px"><a href="1stproject.html" class="link">Algorithmic trading using Python programming language </a>
-            <span style="font-size:12px;">Feb. 8, 2017</span></div>
+             <div style="padding-left:20px;margin-top:20px"><a href="1stproject.html" class="link">Algorithmic Trading using Python </a>
+            <span style="font-size:12px;">Mar. 3, 2017</span></div>
           </div>
            
         <p class=" text" style="margin-top:20px;">
           
-              Ever wanted to automate a trading strategy you had...well,you are  at the 
-right place.This is a program to convert a strategy into a python code which can be useful in analysing our strategy.
+              Ever wanted to automate a trading strategy you had...well, you are  at the 
+right place. This is a program to convert a strategy into a python code which can be useful in analysing our strategy. 
 The strategy I will be coding is the crossover of moving averages 
-.The crossover of 5, 8 and 13  simple moving averages is one of the most popular 
+. The crossover of 5, 8 and 13  simple moving averages is one of the most popular 
 trading strategies among traders.The security here we are choosing is 
-INFOSYS which is listed on National Stock Exchange(NSE), India.We compare the values of the prices and moving averages every
+INFOSYS which is listed on National Stock Exchange(NSE), India. We compare the values of the prices and moving averages every
  sixty seconds.
 The code is ....
 
@@ -117,19 +117,19 @@ The code is ....
           
         <p class=" text">
                      We need four modules for this program namely numpy for calculating moving averages, google finance for getting the stock prices
-, json to store the data we get from google finance and threading to comparing the moving averages at sporadic intervals of time.
+, json to store the data we get from google finance and threading to comparing the moving averages at sporadic intervals of time. 
 There are two functios for moving averages 
-.One of them is simple moving average and the other is exponential 
-moving average .Depending on the trader,he or she can use either of them or even both.
-If  the price is above than the moving average a buy signal is gnerated and vice versa.
+. One of them is simple moving average and the other is exponential 
+moving average. Depending on the trader, he or she can use either of them or even both. 
+If  the price is above than the moving average a buy signal is gnerated and vice versa. 
 This can also be helpful in analysing the strategy before taking it live.We can also use this code for different securities
 just by change the security name.We can even plot all the values and visualise the results and back test it to come up with
-better trading strategies  </p>
+better trading strategies . </p>
              
 
 <p class="text">
-      Here, we set the timer to 60 seconds by using a threading.Timer(60,periodic) and start the timer.When the periodic function is called, the price of the security is appended to the data array and moving averages are calculated and compared and buy and sell signals are generated.
-      In this example,we cancel the thread after two hours . See the code above the line t.cancel(), it says if the length of the data is greater than 120 i.e.,after two hours since one data value is recorded after every 60seconds.
+      Here, we set the timer to 60 seconds by using a threading. Timer(60,periodic) and start the timer.When the periodic function is called, the price of the security is appended to the data array and moving averages are calculated and compared and buy and sell signals are generated. 
+      In this example, we cancel the thread after two hours . See the code above the line t.cancel(), it says if the length of the data is greater than 120 i.e., after two hours since one data value is recorded after every 60seconds.
 </p>
    </div>
         </div>

@@ -959,3 +959,6 @@ img.zoom-img {
     position:fixed;
     height:63px;
 }
+.line:hover{
+    text-decoration: underline;
+}

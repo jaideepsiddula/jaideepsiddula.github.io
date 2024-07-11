@@ -1,239 +1,36 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 <head>
-  <title>Welcome to my GitHub page!</title>
-  <link rel="icon" href="Programmatic4.jpg" type="image/icon type" style="border-radius:50%;">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
-</script>
-  <link rel="stylesheet" type="text/css" href="jaideepwebsite.css">
-  <link rel="stylesheet" type="text/css" href="ionicons.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jaideep Siddula</title>
+  <style>
+    body {
+      font-family: 'Raleway', sans-serif;  /* Set a nicer font */
+      background-color: #f2f2f2;        /* Add a light background color */
+      margin: 0;                        /* Remove default margin */
+      display: flex;                     /* Arrange content flexibly */
+      justify-content: center;          /* Center content horizontally */
+      align-items: center;              /* Center content vertically */
+      min-height: 100vh;                 /* Set minimum height for viewport */
+    }
+    
+    h1 {
+      font-size: 5em;                  /* Increase font size further */
+      color: #333;                     /* Set a dark color for the heading */
+      text-align: center;              /* Center the text */
+      margin-bottom: 20px;             /* Add some space below the heading */
+    }
+    
+    .intro {
+      font-size: 1.2em;                /* Set a smaller font size for intro */
+      color: #666;                     /* Set a lighter color for the intro */
+      text-align: center;              /* Center the text */
+    }
+  </style>
 </head>
-
 <body>
-<div class="post-header position">
-  <div class="container rrr">
-    <div class="row">
-      <div class="six columns">
-        <h4>
-          <a href="index.html" title="#">
-            Jaideep SiDDULA
-          </a>
-        </h4>
-      </div>
-      <div class="six columns">
-        <nav>
-          <ul class="nav-list">
-            <li>
-              <a href="#scroll"  title="Reports">
-                <ion-icon name="document-outline">    
-                </ion-icon>
-              </a>
-            </li>
-            <li>
-              <a href="https://in.linkedin.com/in/jaideep-siddula-b6a710b5" title="Linkedin">
-                <ion-icon name="logo-linkedin">
-                </ion-icon>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/jaideep_siddula/" title="Instagram">
-                <ion-icon name="logo-instagram">
-                </ion-icon>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/jaideepsiddula"  title="Github">
-                <ion-icon name="logo-github">  
-                </ion-icon>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-  <div class="container">
-    <div class="intro" style="margin-top:55px;">
-      <figure>
-        <img src="me.jpg" title="This a Deep Art!" alt="Hey There!"/>
-      </figure>
-      <p>Hey there! My name is Jaideep Siddula. Welcome to my webpage.</p>
-      <p>I'm pursuing Electronics and Communication Engineering in National Institute of Technology, Surat.</p>
-      <p>At the present moment, I'm working on my new Website and Image Classification Project.</p>
-      <p id="scroll"> I'm interested in Web Development, Data Science and Machine Learning. </p>
-      <p>People find me upbeat and self-motivated team player with excellent communication skills.</p>
-    </div>
-
-    <div class="row" style="padding-top:10px;">
-      <div class="twelve columns recent">
-        <h3 style="padding-bottom:20px;">
-         Featured Reports
-        </h3>
-
-        <div style="display:inline-flex;">
-          <div>
-            <a>
-              <img src="tensorflow-logo.png" style="height:150px;width:150px;border-radius:50%;"> 
-              </img>
-            </a>
-          </div>
-          <div style="padding-left:20px;margin-top:20px">
-            <a class="link">
-              Predicting using Tensorflow
-            </a>
-            <span style="font-size:12px;">
-              coming soon
-            </span>
-          </div>
-        </div>
-        <hr class="thin" />
-                                   
-        <div style="display:inline-flex;" >
-          <div>
-            <a href="Sentiment Analysis.html">
-              <img src="twitterlogo.png" style="height:150px;width:150px;">
-              </img>
-            </a>
-          </div>
-          <div style="padding-left:20px;margin-top:20px">
-            <a href="Sentiment Analysis.html" class="link">
-              Sentiment Analysis using Tweets and Twitter APIs
-            </a>
-            <span style="font-size:12px;">
-              February, 2024
-            </span>
-          </div>
-        </div>
-        <hr class="thin" />
-
-        <div style="display:inline-flex;" >
-          <div>
-            <a href="Machine Learning.html">
-              <img src="irislogo.jpg" style="height:150px;width:150px;border-radius:50%;">
-              </img>
-            </a>
-          </div>
-          <div style="padding-left:20px;margin-top:20px">
-            <a href="Machine Learning.html" class="link">
-              Predicting and Visualizing the Iris dataset using sklearn models (Machine Learning)
-            </a>
-            <span style="font-size:12px;">
-              February, 2024
-            </span>
-          </div>
-        </div>
-        <hr class="thin"/>
-
-        <div style="display:inline-flex;" >
-          <div>
-            <a href="killerwebsite\index.html">
-              <img src="logo.png" style="height:150px;width:150px;">
-              </img>
-            </a>
-          </div>
-          <div style="padding-left:20px;margin-top:20px">
-            <a href="killerwebsite\index.html" class="link">
-              An enthralling website using Html, Css and Javascrpit
-            </a>
-            <span style="font-size:12px;">
-              February, 2024
-            </span>
-          </div>
-        </div>
-        <hr class="thin" />
-
-
-        <div style="display:inline-flex;" >
-          <div>
-            <a href="Algorithmic Trading.html">
-            <img src="Programmatic4.jpg" style="height:150px;width:150px;border-radius:50%;">
-            </img>
-          </a>
-          </div>
-          <div style="padding-left:20px;margin-top:40px">
-            <a href="Algorithmic Trading.html" class="link">
-              Algorithmic Trading
-            </a>
-            <span style="font-size:12px;">
-              February, 2024
-            </span>
-          </div>
-        </div>
-        <hr class="thin"/>
-
-        <div style="display:inline-flex;" >
-          <div>
-            <a href="Web Scraper.html">
-              <img src="python-data-science.png" style="height:150px;width:150px;">
-              </img>
-            </a>
-          </div>
-          <div style="padding-left:20px;margin-top:20px">
-            <a href="Web Scraper.html" class="link">
-              Scraping Html pages using Python programming language
-            </a>
-            <span style="font-size:12px;">
-              January, 2024
-            </span>
-          </div>
-        </div>
-        <hr class="thin"/>
-          
-        <div style="display:inline-flex;" >
-          <div >
-            <a href="movie website\watch_trailers.html">
-              <img src="YouTube.png" style="height:150px;width:150px;">
-              </img>
-            </a>
-          </div>
-          <div style="padding-left:20px;margin-top:20px">
-            <a href="movie website\watch_trailers.html"class="link">
-              A movie trailer website based on Python and Html
-            </a>
-            <span style="font-size:12px;">
-              January, 2024
-            </span>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
-<div class="footer"><hr class="thin"/></div>
-
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
+  <h1>Jaideep Siddula</h1>
+  <p class="intro">Welcome to my website!</p>
 </body>
 </html>
